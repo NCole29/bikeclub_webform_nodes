@@ -1,0 +1,14 @@
+name: 'Bikeclub Webform nodes'
+description: 'Provides Webform Node content type.'
+type: 'Content type'
+recipes:
+  - bikeclub_content_type_base
+  - bikeclub_media
+  - bikeclub_banner
+install:
+  # Core
+  - menu_ui
+  # Contrib.
+  - honeypot
+  - scheduler
+  - webform_node

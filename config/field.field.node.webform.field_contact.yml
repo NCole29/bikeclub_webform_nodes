@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact
+    - node.type.webform
+id: node.webform.field_contact
+field_name: field_contact
+entity_type: node
+bundle: webform
+label: Contact
+description: "<b>Want to display links to multiple contact forms?</b><br>\r\nUse the Text editor:\r\n<li>Add text \"Contact membership coordinator\"</li>\r\n<li>Provide the link \"/contact/membership\"</li>\r\n<li>Repeat for additional links</li>\r\nGo to <a href=\"/admin/structure/contact\">Structure > Contact forms</a> and hover over the name of a form to observe the link for each available form, or to create new contact forms.\r\n"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:contact_form'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference
