@@ -1,28 +1,28 @@
 {
-    "name": "bikeclub/bikeclub_webform_nodes",
-    "description": "Installs Webform Node content type.",
-    "keywords": ["recipe", "Drupal standard install"],
-    "type": "drupal-recipe",
-    "license": "GPL-2.0-or-later",
-    "authors": [
-        {
-            "name": "Nancy Cole",
-            "homepage": "https://bikeclubsites.com",
-            "role": "Maintainer"
-        }
-    ],
-    "repositories": {
-        "bikeclub_banner": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_banner" },		
-		"bikeclub_content_type_base": { "type": "vcs", "url": "https://github.com/NCole29/bikeclub_content_type_base" },
-		"bikeclub_media": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_media" }
-	},
-    "require": {
-        "bikeclub/bikeclub_banner": ">=1.0",
-        "bikeclub/bikeclub_content_type_base": ">=1.0",
-        "bikeclub/bikeclub_media": ">=1.0",
-        "drupal/honeypot": ">=2.0",
-        "drupal/scheduler": ">=2.1",
-        "drupal/webform": ">=6.0"
-    },
-    "version": "1.0.1"
+  "name": "bikeclub/bikeclub_webform_nodes",
+  "description": "Installs Webform Node content type.",
+  "keywords": ["recipe", "Drupal standard install"],
+  "type": "drupal-recipe",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Nancy Cole",
+      "homepage": "https://bikeclubsites.com",
+      "role": "Maintainer"
+    }
+  ],
+  "repositories": {
+    "bikeclub_banner": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_banner" },		
+    "bikeclub_content_type_base": { "type": "vcs", "url": "https://github.com/NCole29/bikeclub_content_type_base" },
+    "bikeclub_media": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_media" }
+  },
+  "require": {
+    "bikeclub/bikeclub_banner": ">=1.0",
+    "bikeclub/bikeclub_content_type_base": ">=1.0",
+    "bikeclub/bikeclub_media": ">=1.0",
+    "drupal/honeypot": ">=2.0",
+    "drupal/scheduler": ">=2.1",
+    "drupal/webform": ">=6.0"
+  },
+  "version": "1.0.1"
 }
