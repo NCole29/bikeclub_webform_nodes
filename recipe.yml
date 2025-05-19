@@ -12,3 +12,15 @@ install:
   - honeypot
   - scheduler
   - webform_node
+config:
+  strict: false
+  actions:
+    user.role.site_admin:
+      createIfNotExists:
+        label: 'Site administrator'
+      grantPermissions:
+        - 'create webform content'
+        - 'delete any webform content'
+        - 'edit any webform content'
+        - 'use text format basic_html'
+        - 'use text format summary_fields'
