@@ -1,5 +1,5 @@
 name: 'Bikeclub Webform nodes'
-description: 'Provides Webform Node content type.'
+description: 'Adds a Webform content type. This is useful if a single webform is used multiple times. E.g., a volunteer sign-up webform is used every year. Include it in a new webform page each year and results for each year are available on the webform page.'
 type: 'Content type'
 recipes:
   - bikeclub_content_type_base
