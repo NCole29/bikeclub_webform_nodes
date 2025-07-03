@@ -17,12 +17,12 @@
     "bikeclub_media": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_media" }
   },
   "require": {
-    "bikeclub/bikeclub_banner": ">=1.0",
-    "bikeclub/bikeclub_content_type_base": ">=1.0",
-    "bikeclub/bikeclub_media": ">=1.0",
-    "drupal/honeypot": ">=2.0",
-    "drupal/scheduler": ">=2.1",
-    "drupal/webform": ">=6.0"
+    "bikeclub/bikeclub_banner": "dev-main",
+    "bikeclub/bikeclub_content_type_base": "dev-main",
+    "bikeclub/bikeclub_media": "dev-main",
+    "drupal/honeypot": "^2.0",
+    "drupal/scheduler": "^2.1",
+    "drupal/webform": "^6.0"
   },
   "version": "1.0.1"
 }

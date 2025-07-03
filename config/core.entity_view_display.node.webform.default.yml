@@ -1,3 +1,4 @@
+uuid: null
 langcode: en
 status: true
 dependencies:
@@ -6,22 +7,128 @@ dependencies:
     - field.field.node.webform.field_components
     - field.field.node.webform.field_padding
     - field.field.node.webform.field_page_access
+    - field.field.node.webform.field_registration_closing_date
     - field.field.node.webform.field_summary
     - field.field.node.webform.field_text
     - field.field.node.webform.field_type_of_page
+    - field.field.node.webform.layout_builder__layout
     - field.field.node.webform.webform
     - node.type.webform
   module:
+    - datetime
     - entity_reference_revisions
     - layout_builder
     - layout_builder_restrictions
+    - layout_discovery
     - text
     - user
     - webform
+  enforced:
+    module:
+      - club_event
 third_party_settings:
   layout_builder:
-    enabled: false
-    allow_custom: false
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          cdd02477-227c-49be-8b6d-281cebdab7fd:
+            uuid: cdd02477-227c-49be-8b6d-281cebdab7fd
+            region: content
+            configuration:
+              id: 'extra_field_block:node:webform:content_moderation_control'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          5acaecf9-5b6f-4f84-91d9-0dc9045562d1:
+            uuid: 5acaecf9-5b6f-4f84-91d9-0dc9045562d1
+            region: content
+            configuration:
+              id: 'extra_field_block:node:webform:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 1
+            additional: {  }
+          a4a3d7aa-fda1-4292-8f48-d2d92ea1dab7:
+            uuid: a4a3d7aa-fda1-4292-8f48-d2d92ea1dab7
+            region: content
+            configuration:
+              id: 'field_block:node:webform:field_text'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          22fc87c4-30ea-4564-8280-6a0b6072a90f:
+            uuid: 22fc87c4-30ea-4564-8280-6a0b6072a90f
+            region: content
+            configuration:
+              id: 'field_block:node:webform:field_components'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          4830bf78-3a47-4d9d-880e-9b34b8ab6b9a:
+            uuid: 4830bf78-3a47-4d9d-880e-9b34b8ab6b9a
+            region: content
+            configuration:
+              id: 'field_block:node:webform:webform'
+              label: Webform
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: webform_entity_reference_link
+                label: hidden
+                settings:
+                  label: 'Go to [webform:title] webform'
+                  dialog: ''
+                  attributes:
+                    class:
+                      - register-button
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          396d7f3f-6e9f-4ff4-8426-7cf566296f86:
+            uuid: 396d7f3f-6e9f-4ff4-8426-7cf566296f86
+            region: content
+            configuration:
+              id: 'field_block:node:webform:field_registration_closing_date'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: datetime_default
+                label: above
+                settings:
+                  timezone_override: ''
+                  format_type: long
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+        third_party_settings: {  }
   layout_builder_restrictions:
     allowed_block_categories: {  }
     entity_view_mode_restriction:
@@ -48,6 +155,23 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
+  field_registration_close_date:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_registration_closing_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 5
+    region: content
   field_text:
     type: text_default
     label: hidden
@@ -61,14 +185,11 @@ content:
     weight: 0
     region: content
   webform:
-    type: webform_entity_reference_link
+    type: webform_entity_reference_entity_view
     label: hidden
     settings:
-      label: 'Go to [webform:title] webform'
-      dialog: narrow
-      attributes:
-        class:
-          - w3-dark-button
+      source_entity: true
+      lazy: false
     third_party_settings: {  }
     weight: 3
     region: content
@@ -76,6 +197,7 @@ hidden:
   banner_image: true
   body: true
   field_padding: true
+  field_page_access: true
   field_summary: true
   field_type_of_page: true
   layout_builder__layout: true
