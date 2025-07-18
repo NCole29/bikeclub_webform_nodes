@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.webform.banner_image
     - field.field.node.webform.field_components
-    - field.field.node.webform.field_padding
     - field.field.node.webform.field_page_access
     - field.field.node.webform.field_registration_closing_date
     - field.field.node.webform.field_summary
@@ -196,7 +195,6 @@ content:
 hidden:
   banner_image: true
   body: true
-  field_padding: true
   field_page_access: true
   field_summary: true
   field_type_of_page: true

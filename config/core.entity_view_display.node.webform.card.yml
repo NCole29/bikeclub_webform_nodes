@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.webform.field_components
     - field.field.node.webform.field_contact_form
     - field.field.node.webform.field_contact_person
-    - field.field.node.webform.field_padding
     - field.field.node.webform.field_page_access
     - field.field.node.webform.field_summary
     - field.field.node.webform.field_text
@@ -71,7 +70,6 @@ hidden:
   field_components: true
   field_contact_form: true
   field_contact_person: true
-  field_padding: true
   field_page_access: true
   field_text: true
   field_type_of_page: true

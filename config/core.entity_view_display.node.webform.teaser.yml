@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.webform.banner_image
     - field.field.node.webform.field_components
-    - field.field.node.webform.field_padding
     - field.field.node.webform.field_page_access
     - field.field.node.webform.field_registration_closing_date
     - field.field.node.webform.field_summary
@@ -70,7 +69,6 @@ hidden:
   banner_image: true
   body: true
   field_components: true
-  field_padding: true
   field_page_access: true
   field_registration_close_date: true
   field_text: true

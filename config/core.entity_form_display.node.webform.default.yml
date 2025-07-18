@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.webform.banner_image
     - field.field.node.webform.field_components
-    - field.field.node.webform.field_padding
     - field.field.node.webform.field_page_access
     - field.field.node.webform.field_registration_closing_date
     - field.field.node.webform.field_summary
@@ -86,7 +85,6 @@ third_party_settings:
     group_banner:
       children:
         - banner_image
-        - field_padding
       label: 'Banner image'
       region: content
       parent_name: group_tabs
@@ -122,13 +120,6 @@ content:
       nesting_depth: 0
       require_layouts: 0
       empty_message: ''
-    third_party_settings: {  }
-  field_padding:
-    type: boolean_checkbox
-    weight: 13
-    region: content
-    settings:
-      display_label: true
     third_party_settings: {  }
   field_page_access:
     type: options_select
