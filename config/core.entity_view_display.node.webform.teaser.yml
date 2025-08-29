@@ -1,4 +1,3 @@
-uuid: null
 langcode: en
 status: true
 dependencies:
@@ -6,8 +5,11 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.webform.banner_image
     - field.field.node.webform.field_components
+    - field.field.node.webform.field_contact_form
+    - field.field.node.webform.field_contact_person
     - field.field.node.webform.field_page_access
     - field.field.node.webform.field_registration_closing_date
+    - field.field.node.webform.field_registrations_visible
     - field.field.node.webform.field_summary
     - field.field.node.webform.field_text
     - field.field.node.webform.field_type_of_page
@@ -18,19 +20,27 @@ dependencies:
     - datetime
     - text
     - user
+    - user_contactlink
     - webform
-  enforced:
-    module:
-      - club_event
 id: node.webform.teaser
 targetEntityType: node
 bundle: webform
 mode: teaser
 content:
-  content_moderation_control:
+  field_contact_form:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_contact_person:
+    type: entity_reference_contact
+    label: above
     settings: {  }
     third_party_settings: {  }
-    weight: -20
+    weight: 2
     region: content
   field_registration_closing_date:
     type: datetime_default
@@ -71,6 +81,7 @@ hidden:
   field_components: true
   field_page_access: true
   field_registration_close_date: true
+  field_registrations_visible: true
   field_text: true
   field_type_of_page: true
   layout_builder__layout: true

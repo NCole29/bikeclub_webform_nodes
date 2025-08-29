@@ -1,4 +1,3 @@
-uuid: a68bf8e8-cdb6-4e20-b256-011dc5b19348
 langcode: en
 status: true
 dependencies:
@@ -23,11 +22,6 @@ targetEntityType: node
 bundle: webform
 mode: teaser2
 content:
-  content_moderation_control:
-    settings: {  }
-    third_party_settings: {  }
-    weight: -20
-    region: content
   field_registration_closing_date:
     type: datetime_default
     label: inline

@@ -35,11 +35,6 @@ targetEntityType: node
 bundle: webform
 mode: card
 content:
-  content_moderation_control:
-    settings: {  }
-    third_party_settings: {  }
-    weight: -20
-    region: content
   field_summary:
     type: text_default
     label: hidden

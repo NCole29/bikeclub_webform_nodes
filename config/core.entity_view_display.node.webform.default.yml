@@ -1,12 +1,14 @@
-uuid: null
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.webform.banner_image
     - field.field.node.webform.field_components
+    - field.field.node.webform.field_contact_form
+    - field.field.node.webform.field_contact_person
     - field.field.node.webform.field_page_access
     - field.field.node.webform.field_registration_closing_date
+    - field.field.node.webform.field_registrations_visible
     - field.field.node.webform.field_summary
     - field.field.node.webform.field_text
     - field.field.node.webform.field_type_of_page
@@ -17,14 +19,11 @@ dependencies:
     - datetime
     - entity_reference_revisions
     - layout_builder
-    - layout_builder_restrictions
     - layout_discovery
     - text
     - user
+    - user_contactlink
     - webform
-  enforced:
-    module:
-      - club_event
 third_party_settings:
   layout_builder:
     enabled: true
@@ -35,16 +34,6 @@ third_party_settings:
         layout_settings:
           label: ''
         components:
-          cdd02477-227c-49be-8b6d-281cebdab7fd:
-            uuid: cdd02477-227c-49be-8b6d-281cebdab7fd
-            region: content
-            configuration:
-              id: 'extra_field_block:node:webform:content_moderation_control'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-            weight: 0
-            additional: {  }
           5acaecf9-5b6f-4f84-91d9-0dc9045562d1:
             uuid: 5acaecf9-5b6f-4f84-91d9-0dc9045562d1
             region: content
@@ -127,24 +116,59 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 5
             additional: {  }
+          1d7d7fe6-93b2-4162-9d97-b6d021ac25c2:
+            uuid: 1d7d7fe6-93b2-4162-9d97-b6d021ac25c2
+            region: content
+            configuration:
+              id: 'field_block:node:webform:field_registrations_visible'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+          bd88c087-c29a-4d52-8de6-70313344851b:
+            uuid: bd88c087-c29a-4d52-8de6-70313344851b
+            region: content
+            configuration:
+              id: 'field_block:node:webform:field_contact_form'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 7
+            additional: {  }
+          3f9cce34-4420-484c-9625-5384bb5b103e:
+            uuid: 3f9cce34-4420-484c-9625-5384bb5b103e
+            region: content
+            configuration:
+              id: 'field_block:node:webform:field_contact_person'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_contact
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 8
+            additional: {  }
         third_party_settings: {  }
-  layout_builder_restrictions:
-    allowed_block_categories: {  }
-    entity_view_mode_restriction:
-      allowed_layouts: {  }
-      denylisted_blocks: {  }
-      allowlisted_blocks: {  }
-      restricted_categories: {  }
 id: node.webform.default
 targetEntityType: node
 bundle: webform
 mode: default
 content:
-  content_moderation_control:
-    settings: {  }
-    third_party_settings: {  }
-    weight: -20
-    region: content
   field_components:
     type: entity_reference_revisions_entity_view
     label: hidden
@@ -153,6 +177,21 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_contact_form:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_contact_person:
+    type: entity_reference_contact
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
     region: content
   field_registration_close_date:
     type: string
@@ -170,6 +209,14 @@ content:
       format_type: long
     third_party_settings: {  }
     weight: 5
+    region: content
+  field_registrations_visible:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
     region: content
   field_text:
     type: text_default
