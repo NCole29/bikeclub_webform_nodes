@@ -9,7 +9,7 @@ field_name: field_contact_person
 entity_type: node
 bundle: webform
 label: Contact
-description: ''
+description: "The contact's name appears without a link to their contact form if they disabled the personal contact form in their account settings."
 required: false
 translatable: false
 default_value: {  }

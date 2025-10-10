@@ -22,7 +22,6 @@ dependencies:
     - layout_discovery
     - text
     - user
-    - user_contactlink
     - webform
 third_party_settings:
   layout_builder:
@@ -34,6 +33,16 @@ third_party_settings:
         layout_settings:
           label: ''
         components:
+          cdd02477-227c-49be-8b6d-281cebdab7fd:
+            uuid: cdd02477-227c-49be-8b6d-281cebdab7fd
+            region: content
+            configuration:
+              id: 'extra_field_block:node:webform:content_moderation_control'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
           5acaecf9-5b6f-4f84-91d9-0dc9045562d1:
             uuid: 5acaecf9-5b6f-4f84-91d9-0dc9045562d1
             region: content
@@ -64,15 +73,17 @@ third_party_settings:
             region: content
             configuration:
               id: 'field_block:node:webform:field_components'
+              label: Components
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
-                type: entity_reference_revisions_entity_view
+                type: layout_paragraphs
                 label: hidden
                 settings:
                   view_mode: default
-                  link: ''
                 third_party_settings: {  }
             weight: 3
             additional: {  }
@@ -153,9 +164,12 @@ third_party_settings:
             region: content
             configuration:
               id: 'field_block:node:webform:field_contact_person'
+              label: Contact
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
                 type: entity_reference_contact
                 label: above
@@ -169,6 +183,11 @@ targetEntityType: node
 bundle: webform
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_components:
     type: entity_reference_revisions_entity_view
     label: hidden
@@ -187,11 +206,12 @@ content:
     weight: 2
     region: content
   field_contact_person:
-    type: entity_reference_contact
+    type: entity_reference_label
     label: above
-    settings: {  }
+    settings:
+      link: true
     third_party_settings: {  }
-    weight: 3
+    weight: 7
     region: content
   field_registration_close_date:
     type: string
