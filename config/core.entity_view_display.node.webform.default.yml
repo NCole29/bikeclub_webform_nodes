@@ -33,16 +33,6 @@ third_party_settings:
         layout_settings:
           label: ''
         components:
-          cdd02477-227c-49be-8b6d-281cebdab7fd:
-            uuid: cdd02477-227c-49be-8b6d-281cebdab7fd
-            region: content
-            configuration:
-              id: 'extra_field_block:node:webform:content_moderation_control'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-            weight: 0
-            additional: {  }
           5acaecf9-5b6f-4f84-91d9-0dc9045562d1:
             uuid: 5acaecf9-5b6f-4f84-91d9-0dc9045562d1
             region: content
@@ -183,11 +173,6 @@ targetEntityType: node
 bundle: webform
 mode: default
 content:
-  content_moderation_control:
-    settings: {  }
-    third_party_settings: {  }
-    weight: -20
-    region: content
   field_components:
     type: entity_reference_revisions_entity_view
     label: hidden
