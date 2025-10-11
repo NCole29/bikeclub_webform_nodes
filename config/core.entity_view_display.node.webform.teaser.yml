@@ -35,7 +35,7 @@ content:
     weight: 1
     region: content
   field_contact_person:
-    type: entity_reference_contact
+    type: user_contact_link
     label: above
     settings: {  }
     third_party_settings: {  }
