@@ -13,7 +13,6 @@ install:
   - webform_templates
   - webform_ui
   - webform_views
-  - webform_views_extras
 config:
   strict: false
   actions:

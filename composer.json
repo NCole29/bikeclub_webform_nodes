@@ -23,8 +23,7 @@
     "drupal/honeypot": "^2.0",
     "drupal/scheduler": "^2.1",
     "drupal/webform": "^6.3@beta",
-    "drupal/webform_views": "^5.5",
-    "drupal/webform_views_extras": "^2.0"
+    "drupal/webform_views": "^5.5"
   },
   "version": "1.0.1"
 }
