@@ -7,8 +7,8 @@ dependencies:
     - field.field.node.webform.field_contact_form
     - field.field.node.webform.field_contact_person
     - field.field.node.webform.field_page_access
-    - field.field.node.webform.field_registration_closing_date
-    - field.field.node.webform.field_registrations_visible
+    - field.field.node.webform.field_webform_closing_date
+    - field.field.node.webform.field_results_visible
     - field.field.node.webform.field_summary
     - field.field.node.webform.field_text
     - field.field.node.webform.field_type_of_page
@@ -104,7 +104,7 @@ third_party_settings:
             uuid: 396d7f3f-6e9f-4ff4-8426-7cf566296f86
             region: content
             configuration:
-              id: 'field_block:node:webform:field_registration_closing_date'
+              id: 'field_block:node:webform:field_webform_closing_date'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
@@ -121,7 +121,7 @@ third_party_settings:
             uuid: 1d7d7fe6-93b2-4162-9d97-b6d021ac25c2
             region: content
             configuration:
-              id: 'field_block:node:webform:field_registrations_visible'
+              id: 'field_block:node:webform:field_results_visible'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
@@ -206,7 +206,7 @@ content:
     third_party_settings: {  }
     weight: 4
     region: content
-  field_registration_closing_date:
+  field_webform_closing_date:
     type: datetime_default
     label: above
     settings:
@@ -215,7 +215,7 @@ content:
     third_party_settings: {  }
     weight: 5
     region: content
-  field_registrations_visible:
+  field_results_visible:
     type: entity_reference_label
     label: above
     settings:

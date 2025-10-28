@@ -4,7 +4,6 @@ dependencies:
   config:
     - field.storage.node.webform
     - node.type.webform
-    - webform.webform.century_volunteers
   module:
     - webform
 id: node.webform.webform
