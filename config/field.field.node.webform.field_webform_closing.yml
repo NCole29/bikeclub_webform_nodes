@@ -7,7 +7,7 @@ dependencies:
   module:
     - datetime
 id: node.webform.field_webform_closing
-field_name: field_webform_closing_date
+field_name: field_webform_closing
 entity_type: node
 bundle: webform
 label: 'Webform will close on'

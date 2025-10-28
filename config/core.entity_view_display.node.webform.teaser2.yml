@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.webform.field_components
     - field.field.node.webform.field_padding
     - field.field.node.webform.field_page_access
-    - field.field.node.webform.field_webform_closing_date
+    - field.field.node.webform.field_webform_closing
     - field.field.node.webform.field_summary
     - field.field.node.webform.field_text
     - field.field.node.webform.field_type_of_page
@@ -22,7 +22,7 @@ targetEntityType: node
 bundle: webform
 mode: teaser2
 content:
-  field_webform_closing_date:
+  field_webform_closing:
     type: datetime_default
     label: inline
     settings:
