@@ -4,6 +4,7 @@ type: 'Content type'
 recipes:
   - bikeclub_banner
   - bikeclub_content_type_base
+  - bikeclub_field_storage_webform
 install:
   # Contrib.
   - honeypot
