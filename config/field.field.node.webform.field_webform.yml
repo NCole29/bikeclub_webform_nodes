@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.webform
+    - field.storage.node.field_webform
     - node.type.webform
   module:
     - webform
