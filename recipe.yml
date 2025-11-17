@@ -17,12 +17,34 @@ install:
 config:
   strict: false
   actions:
+  # 'Webform' vs 'Webform content' - the latter refers to nodes.
+    user.role.events_coordinator:
+      createIfNotExists:
+        label: 'Events coordinator'
+      grantPermissions:
+        - 'access own webform configuration'
+        - 'access webform help'
+        - 'access webform overview'
+        - 'create webform'
+        - 'create webform content'
+        - 'delete own webform'
+        - 'delete any webform content'
+        - 'edit own webform'
+        - 'edit any webform content'
+        - 'use text format basic_html'
+        - 'use text format summary_fields'
     user.role.site_admin:
       createIfNotExists:
         label: 'Site administrator'
       grantPermissions:
+        - 'access own webform configuration'
+        - 'access webform help'
+        - 'access webform overview'
+        - 'create webform'
         - 'create webform content'
+        - 'delete own webform'
         - 'delete any webform content'
+        - 'edit own webform'
         - 'edit any webform content'
         - 'use text format basic_html'
         - 'use text format summary_fields'
