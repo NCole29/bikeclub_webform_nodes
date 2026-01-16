@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.summary_2
+    - core.entity_view_mode.node.summary_card
     - field.field.node.webform.banner_image
     - field.field.node.webform.field_components
     - field.field.node.webform.field_contact_form
@@ -22,16 +22,24 @@ dependencies:
   module:
     - datetime
     - layout_builder
+    - layout_builder_restrictions
     - text
     - user
 third_party_settings:
   layout_builder:
     enabled: false
     allow_custom: false
-id: node.webform.summary_2
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: node.webform.summary_card
 targetEntityType: node
 bundle: webform
-mode: summary_2
+mode: summary_card
 content:
   field_summary:
     type: text_default
